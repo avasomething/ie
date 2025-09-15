@@ -16,3 +16,5 @@ async function loadContent() {
             console.error('Error loading HTML snippet:', error);
         }
     }
+
+loadContent();
