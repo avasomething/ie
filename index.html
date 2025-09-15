@@ -6,22 +6,18 @@
   <title>injection test</title>
 </head>
 <body style="background:#0b0b0c; padding:16px; color:#fff;">
-  <div id="root">Loading…</div>
+  <div id="root">loading…</div>
 
   <script>
-    // load snippet.html and inject into #root
+    // load content.html and inject into #root
     fetch("content.html")
       .then(response => response.text())
       .then(html => {
         document.getElementById("root").innerHTML = html;
-
-        // optional: add JS behavior after injection
-        document.querySelector("#root button")?.addEventListener("click", () => {
-          alert("Verification button clicked!");
         });
       })
       .catch(err => {
-        document.getElementById("root").textContent = "Error loading snippet.";
+        document.getElementById("root").textContent = "Error loading content.";
         console.error(err);
       });
   </script>
